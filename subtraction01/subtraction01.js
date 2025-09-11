@@ -3,14 +3,14 @@ $(document).ready(function(){
   let countingEnabled = true;
   let ponyIndex = 0;
 
-  const ponies = [
+  const ponies = shuffle([
     '../images/pony01.png',
     '../images/pony02.png',
     '../images/pony03.png',
     '../images/pony04.png',
     '../images/pony05.png',
     '../images/pony06.png'
-  ];
+  ]);
   const preloadedImages = [];
   $.each(ponies, function(index, src) {
     const img = new Image();
