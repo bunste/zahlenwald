@@ -9,7 +9,9 @@ $(document).ready(function(){
     '../images/pony03.png',
     '../images/pony04.png',
     '../images/pony05.png',
-    '../images/pony06.png'
+    '../images/pony06.png',
+    '../images/pony07.png',
+    '../images/pony08.png'
   ]);
   const preloadedImages = [];
   $.each(ponies, function(index, src) {
@@ -69,7 +71,7 @@ $(document).ready(function(){
       if (countingEnabled) {
         countingEnabled = false;
         successCounter += 1;
-        if (successCounter % 5 === 0) {
+        if (successCounter % 1 === 0) {
           showPony();
         }
         const message = getRandomSuccessMessage();
