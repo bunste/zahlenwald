@@ -71,7 +71,7 @@ $(document).ready(function(){
       if (countingEnabled) {
         countingEnabled = false;
         successCounter += 1;
-        if (successCounter % 1 === 0) {
+        if (successCounter % 5 === 0) {
           showPony();
         }
         const message = getRandomSuccessMessage();
