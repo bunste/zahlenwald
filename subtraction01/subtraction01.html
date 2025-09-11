@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zahlenwald</title>
+
+  <!-- Normalize.css via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+  <!-- Base styles -->
+  <link rel="stylesheet" href="../base-styles.css" />
+  <!-- Lesson specific styles -->
+  <link rel="stylesheet" href="subtraction01.css" />
+</head>
+<body>
+  <header>
+    <h1>Subtraktion im Bereich 1-100</h1>
+  </header>
+
+  <main>
+    <section class="exercise">
+      <div class="score-line">
+        <span id="success-counter" class="success-counter">0</span>
+      </div>
+
+      <p>
+        <span id="numA"></span> - <span id="numB"></span> = 
+        <input id="answer" type="text" inputmode="numeric">
+        <button id="checkAnswer">Prüfen</button>
+      </p>
+      <button id="nextExercise">Nächste Aufgabe</button>
+
+      <div class="feedback-line">
+        <span id="message" class="message">Viel Spaß!</span>
+      </div>
+
+      <img id="pony" src="">
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+
+  <!-- Base script -->
+  <script src="../base-script.js" defer></script>
+  <!-- Lesson specific script -->
+  <script src="subtraction01.js?v=7" defer></script>
+</body>
+</html>

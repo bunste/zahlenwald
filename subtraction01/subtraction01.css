@@ -1,0 +1,62 @@
+/* Exercise Section */
+.exercise {
+  position: relative;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Aufgabe Text & Input */
+.exercise p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#answer {
+  width: 60px;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  border: 2px solid #0055a5;
+  border-radius: 8px;
+}
+
+.score-line {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+}
+.success-counter {
+  opacity: 0;
+  transition: opacity 0.4s; /* sanftes Ein-/Ausblenden */
+}
+
+.feedback-line {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.message {
+  opacity: 0;
+  transition: opacity 0.4s; /* sanftes Ein-/Ausblenden */
+}
+
+.show {
+  opacity: 1;
+}
+.success {
+  color: #28a745;
+}
+.error {
+  color: #d9534f;
+}
+
+#pony {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  max-width: 110px;
+}
