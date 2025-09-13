@@ -14,13 +14,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 
   <!-- Base styles -->
-  <link rel="stylesheet" href="../base-styles.css" />
+  <link rel="stylesheet" href="base-styles.css" />
   <!-- Lesson specific styles -->
-  <link rel="stylesheet" href="subtraction01.css" />
+  <link rel="stylesheet" href="lesson-styles.css" />
 </head>
 <body>
   <header>
-    <h1>Subtraktion im Bereich 1-100</h1>
+    <h1 id="lessonTitle"></h1>
   </header>
 
   <main>
@@ -50,9 +50,18 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
 
-  <!-- Base script -->
-  <script src="../base-script.js?v=11" defer></script>
+  <!-- Base script (increase version to avoid caching) -->
+  <script src="base-script.js?v=13" defer></script>
   <!-- Lesson specific script (increase version to avoid caching) -->
-  <script src="subtraction01.js?v=11" defer></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const lesson = params.get("lesson");
+  
+    if (lesson) {
+      const script = document.createElement("script");
+      script.src = "lessons/" + lesson + ".js?v=13";
+      document.body.appendChild(script);
+    }
+  </script>
 </body>
 </html>

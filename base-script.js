@@ -22,14 +22,14 @@ function getRandomSuccessMessage() {
 }
 
 const ponies = shuffle([
-  '../images/pony01.png',
-  '../images/pony02.png',
-  '../images/pony03.png',
-  '../images/pony04.png',
-  '../images/pony05.png',
-  '../images/pony06.png',
-  '../images/pony07.png',
-  '../images/pony08.png'
+  'images/pony01.png',
+  'images/pony02.png',
+  'images/pony03.png',
+  'images/pony04.png',
+  'images/pony05.png',
+  'images/pony06.png',
+  'images/pony07.png',
+  'images/pony08.png'
 ]);
 const preloadedImages = [];
 $.each(ponies, function(index, src) {

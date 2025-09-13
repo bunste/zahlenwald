@@ -10,5 +10,6 @@ function generateSubtraction() {
 }
 
 $(document).ready(function(){
+  $("#lessonTitle").text("Subtraktion im Bereich 1-100");
   startLesson(generateSubtraction);
 });
