@@ -112,4 +112,10 @@ function startLesson(generatorFn) {
   $('#nextExercise').click(() => newTask());
 
   $('#checkAnswer').click(() => checkAnswer(currentTask));
+
+  $('#answer').on('keyup', function(e) {
+    if (e.key === 'Enter') {
+      checkAnswer(currentTask);
+    }
+  });
 }
