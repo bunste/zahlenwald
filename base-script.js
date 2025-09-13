@@ -47,6 +47,7 @@ function showPony() {
 function renderTask(task) {
   $('#numA').text(task.numbers[0]);
   $('#numB').text(task.numbers[1]);
+  $('#operator').text(task.operator);
   $('#answer').val('');
   $('#message').removeClass('show');
   $('#pony').fadeOut();
