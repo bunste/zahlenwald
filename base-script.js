@@ -42,6 +42,9 @@ function showPony() {
   const ponyImg = $('#pony');
   ponyImg.attr('src', ponies[ponyIndex]).fadeIn();
   ponyIndex = (ponyIndex+1) % ponies.length;
+  if (ponyIndex === 0) {
+    shuffle(ponies);
+  }
 }
 
 function renderTask(task) {
