@@ -60,3 +60,15 @@
   display: none;
   max-height: 140px;
 }
+
+@keyframes hop {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-30px); }
+  60%  { transform: translateY(0); }
+  80%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.hop {
+  animation: hop 0.6s ease;
+}

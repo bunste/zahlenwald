@@ -134,4 +134,16 @@ function startLesson(generatorFn) {
       checkAnswer(currentTask);
     }
   });
+
+  /*
+  $("#pony").on("click", function () {
+    const $pony = $(this);
+    $pony.addClass("hop");
+
+    // Remove class when animation is finished
+    $pony.on("animationend", function () {
+      $pony.removeClass("hop");
+    });
+  });
+  */
 }
