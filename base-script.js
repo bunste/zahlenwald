@@ -13,7 +13,20 @@ const successMessages = [
   "Du hast es drauf!",
   "Fantastisch!",
   "Sehr gut!",
-  "Spitze!"
+  "Spitze!",
+  "Großartig!",
+  "Genial!",
+  "Stark gemacht!",
+  "Wunderbar!",
+  "Hervorragend!",
+  "Richtig schlau!",
+  "Weltklasse!",
+  "Mega!",
+  "Du bist spitze!",
+  "Prima!",
+  "Goldrichtig!",
+  "Hammermäßig!",
+  "Yeah, geschafft!"
 ];
 
 function getRandomSuccessMessage() {
