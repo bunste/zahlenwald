@@ -10,6 +10,6 @@ function generateMultiplication() {
 }
 
 $(document).ready(function(){
-  $("#lessonTitle").text("Kleines Einmaleins");
+  $("#lessonTitle").text("Kleines Einmaleins - Multiplikation");
   startLesson(generateMultiplication);
 });
