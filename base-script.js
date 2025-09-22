@@ -42,7 +42,8 @@ const ponies = shuffle([
   'images/pony05.png',
   'images/pony06.png',
   'images/pony07.png',
-  'images/pony08.png'
+  'images/pony08.png',
+  'images/pony09.png'
 ]);
 const preloadedImages = [];
 $.each(ponies, function(index, src) {
