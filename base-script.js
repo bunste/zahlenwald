@@ -90,6 +90,9 @@ function checkAnswer(task) {
       spread: 70,
       origin: { y: 0.7 }
     });
+    // Show success message
+    const message = getRandomSuccessMessage();
+    $('#message').text(message).removeClass('error').addClass('success show');
 
     if (countingEnabled) {
       countingEnabled = false;
@@ -97,8 +100,6 @@ function checkAnswer(task) {
       if (successCounter % 5 === 0) {
         showPony();
       }
-      const message = getRandomSuccessMessage();
-      $('#message').text(message).removeClass('error').addClass('success show');
       $('#success-counter').addClass('success show').text(successCounter);
     }
   } else {
