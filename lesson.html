@@ -51,7 +51,7 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
 
   <!-- Base script (increase version to avoid caching) -->
-  <script src="base-script.js?v=14" defer></script>
+  <script src="base-script.js?v=15" defer></script>
   <!-- Lesson specific script (increase version to avoid caching) -->
   <script defer>
     const params = new URLSearchParams(window.location.search);
@@ -59,7 +59,7 @@
   
     if (lesson) {
       const script = document.createElement("script");
-      script.src = "lessons/" + lesson + ".js?v=14";
+      script.src = "lessons/" + lesson + ".js?v=15";
       script.defer = true;
       document.body.appendChild(script);
     }

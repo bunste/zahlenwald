@@ -1,11 +1,11 @@
 /*
-Typ: A + B = C
+Typ: A - B = C
 
 A zufällig
 B 1-9, 10-90, 100-900
-C <= 1000
+C >= 0
 */
-function generateAddition() {
+function generateSubtraction() {
 
   // Schritt 1: Zufällige Zahl zwischen 1 und 9
   const zahl = Math.floor(Math.random() * 9) + 1;
@@ -28,13 +28,13 @@ function generateAddition() {
   const b = Math.floor(Math.random() * (1000 - a)) + 1;
 
   return {
-    numbers: [b, a],
-    operator: '+',
-    correctAnswer: b+a
+    numbers: [b+a, a],
+    operator: '-',
+    correctAnswer: b
   };
 }
 
 $(document).ready(function(){
-  $("#lessonTitle").text("Addition im Bereich 1-1000");
-  startLesson(generateAddition);
+  $("#lessonTitle").text("Subtraktion im Bereich 1-1000");
+  startLesson(generateSubtraction);
 });
