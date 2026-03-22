@@ -12,18 +12,18 @@ function generateAddition() {
 
   // Schritt 2: Zufällige Auswahl, ob wir 0, 1 oder 2 Nullen anhängen
   const r = Math.random(); // 0 ≤ r < 1
-  let nullen;
+  let zeros;
 
   if (r < 0.3) { // 30% Chance
-    nullen = 0;
+    zeros = 0;
   } else if (r < 0.65) { // weitere 35% Chance
-    nullen = 1;
+    zeros = 1;
   } else { // verbleibende 35% Chance
-    nullen = 2;
+    zeros = 2;
   }
 
   // Endergebnis
-  const a = zahl * Math.pow(10, nullen);
+  const a = zahl * Math.pow(10, zeros);
 
   const b = Math.floor(Math.random() * (1000 - a)) + 1;
 
