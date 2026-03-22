@@ -35,6 +35,6 @@ function generateAddition() {
 }
 
 $(document).ready(function(){
-  $("#lessonTitle").text("Addition im Bereich 1-1000");
+  $("#lessonTitle").text("Addition im Zahlenraum 1 bis 1000");
   startLesson(generateAddition);
 });

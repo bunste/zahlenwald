@@ -10,6 +10,6 @@ function generateAddition() {
 }
 
 $(document).ready(function(){
-  $("#lessonTitle").text("Addition im Bereich 1-100");
+  $("#lessonTitle").text("Addition im Zahlenraum 1 bis 100");
   startLesson(generateAddition);
 });

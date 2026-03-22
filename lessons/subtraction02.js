@@ -35,6 +35,6 @@ function generateSubtraction() {
 }
 
 $(document).ready(function(){
-  $("#lessonTitle").text("Subtraktion im Bereich 1-1000");
+  $("#lessonTitle").text("Subtraktion im Zahlenraum 1 bis 1000");
   startLesson(generateSubtraction);
 });

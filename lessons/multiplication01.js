@@ -19,6 +19,6 @@ function generateMultiplication() {
 }
 
 $(document).ready(function(){
-  $("#lessonTitle").text("Kleines Einmaleins - Multiplikation");
+  $("#lessonTitle").text("Multiplikation im Zahlenraum 1 bis 100");
   startLesson(generateMultiplication);
 });

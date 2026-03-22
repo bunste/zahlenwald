@@ -19,6 +19,6 @@ function generateDivision() {
 }
 
 $(document).ready(function(){
-  $("#lessonTitle").text("Kleines Einmaleins - Division");
+  $("#lessonTitle").text("Division im Zahlenraum 1 bis 100");
   startLesson(generateDivision);
 });
