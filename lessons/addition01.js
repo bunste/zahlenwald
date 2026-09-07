@@ -1,15 +1,16 @@
-function generateAddition() {
-  const a = Math.floor(Math.random() * (100 - 2 + 1)) + 2; // 2 bis 100 inkl.
-  const b = Math.floor(Math.random() * (a - 1)) + 1; // 1 <= b < a
+import { binaryTask } from '../js/task.js';
+import { randomInt } from '../js/util.js';
 
-  return {
-    numbers: [a-b, b],
-    operator: '+',
-    correctAnswer: a
-  };
-}
+export default {
+  id: 'addition01',
+  icon: '➕',
+  name: 'Addition (1)',
+  description: 'Zahlenraum 1 bis 100',
+  title: 'Addition im Zahlenraum 1 bis 100',
 
-$(document).ready(function(){
-  $("#lessonTitle").text("Addition im Zahlenraum 1 bis 100");
-  startLesson(generateAddition);
-});
+  generate() {
+    const a = randomInt(1, 99);
+    const b = randomInt(1, 100 - a);
+    return binaryTask(a, '+', b, a + b);
+  }
+};

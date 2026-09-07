@@ -1,15 +1,16 @@
-function generateSubtraction() {
-  const a = Math.floor(Math.random() * (100 - 2 + 1)) + 2; // 2 bis 100 inkl.
-  const b = Math.floor(Math.random() * (a - 1)) + 1; // 1 <= b < a
+import { binaryTask } from '../js/task.js';
+import { randomInt } from '../js/util.js';
 
-  return {
-    numbers: [a, b],
-    operator: '-',
-    correctAnswer: a - b
-  };
-}
+export default {
+  id: 'subtraction01',
+  icon: '➖',
+  name: 'Subtraktion (1)',
+  description: 'Zahlenraum 1 bis 100',
+  title: 'Subtraktion im Zahlenraum 1 bis 100',
 
-$(document).ready(function(){
-  $("#lessonTitle").text("Subtraktion im Zahlenraum 1 bis 100");
-  startLesson(generateSubtraction);
-});
+  generate() {
+    const a = randomInt(2, 100);
+    const b = randomInt(1, a - 1);
+    return binaryTask(a, '-', b, a - b);
+  }
+};

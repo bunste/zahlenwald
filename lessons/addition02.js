@@ -1,40 +1,24 @@
-/*
-Typ: A + B = C
+import { binaryTask } from '../js/task.js';
+import { randomInt } from '../js/util.js';
 
-A zufällig
-B 1-9, 10-90, 100-900
-C <= 1000
-*/
-function generateAddition() {
-
-  // Schritt 1: Zufällige Zahl zwischen 1 und 9
-  const zahl = Math.floor(Math.random() * 9) + 1;
-
-  // Schritt 2: Zufällige Auswahl, ob wir 0, 1 oder 2 Nullen anhängen
-  const r = Math.random(); // 0 ≤ r < 1
-  let zeros;
-
-  if (r < 0.3) { // 30% Chance
-    zeros = 0;
-  } else if (r < 0.65) { // weitere 35% Chance
-    zeros = 1;
-  } else { // verbleibende 35% Chance
-    zeros = 2;
-  }
-
-  // Endergebnis
-  const a = zahl * Math.pow(10, zeros);
-
-  const b = Math.floor(Math.random() * (1000 - a)) + 1;
-
-  return {
-    numbers: [b, a],
-    operator: '+',
-    correctAnswer: b+a
-  };
+// Picks a "round" addend: 1-9, 10-90 or 100-900.
+function roundNumber() {
+  const digit = randomInt(1, 9);
+  const r = Math.random();
+  const zeros = r < 0.3 ? 0 : r < 0.65 ? 1 : 2;
+  return digit * Math.pow(10, zeros);
 }
 
-$(document).ready(function(){
-  $("#lessonTitle").text("Addition im Zahlenraum 1 bis 1000");
-  startLesson(generateAddition);
-});
+export default {
+  id: 'addition02',
+  icon: '➕',
+  name: 'Addition (2)',
+  description: 'Zahlenraum 1 bis 1000',
+  title: 'Addition im Zahlenraum 1 bis 1000',
+
+  generate() {
+    const a = roundNumber();
+    const b = randomInt(1, 1000 - a);
+    return binaryTask(b, '+', a, b + a);
+  }
+};

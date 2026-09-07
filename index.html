@@ -26,40 +26,13 @@
       <p>Hier kannst du spielerisch dein Kopfrechnen üben. Wähle eine Lektion:</p>
     </section>
 
-    <section class="lessons">
-      <a class="lesson-card" href="lesson.html?lesson=addition01">
-        <h2>➕ Addition (1)</h2>
-        <p>Zahlenraum 1 bis 100</p>
-      </a>
-
-      <a class="lesson-card" href="lesson.html?lesson=addition02">
-        <h2>➕ Addition (2)</h2>
-        <p>Zahlenraum 1 bis 1000</p>
-      </a>
-
-      <a class="lesson-card" href="lesson.html?lesson=subtraction01">
-        <h2>➖ Subtraktion (1)</h2>
-        <p>Zahlenraum 1 bis 100</p>
-      </a>
-
-      <a class="lesson-card" href="lesson.html?lesson=subtraction02">
-        <h2>➖ Subtraktion (2)</h2>
-        <p>Zahlenraum 1 bis 1000</p>
-      </a>
-
-      <a class="lesson-card" href="lesson.html?lesson=multiplication01">
-        <h2>✖️ Multiplikation</h2>
-        <p>Zahlenraum 1 bis 100</p>
-      </a>
-
-      <a class="lesson-card" href="lesson.html?lesson=division01">
-        <h2>➗ Division</h2>
-        <p>Zahlenraum 1 bis 100</p>
-      </a>
-    </section>
+    <!-- Lesson cards are rendered from the lesson registry (js/lessons.js). -->
+    <section class="lessons"></section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+
+  <script type="module" src="js/index-page.js"></script>
 </body>
 </html>

@@ -29,12 +29,8 @@
         <span id="success-counter" class="success-counter">0</span>
       </div>
 
-      <p>
-        <span id="numA"></span>
-        <span id="operator"></span>
-        <span id="numB"></span>
-        =
-        <input id="answer" type="text" inputmode="numeric">
+      <p class="task-line">
+        <span id="task"></span>
         <button id="checkAnswer">Prüfen</button>
       </p>
       <button id="nextExercise">Nächste Aufgabe</button>
@@ -50,19 +46,6 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
 
-  <!-- Base script (increase version to avoid caching) -->
-  <script src="base-script.js?v=17" defer></script>
-  <!-- Lesson specific script (increase version to avoid caching) -->
-  <script defer>
-    const params = new URLSearchParams(window.location.search);
-    const lesson = params.get("lesson");
-  
-    if (lesson) {
-      const script = document.createElement("script");
-      script.src = "lessons/" + lesson + ".js?v=17";
-      script.defer = true;
-      document.body.appendChild(script);
-    }
-  </script>
+  <script type="module" src="js/lesson-page.js"></script>
 </body>
 </html>
