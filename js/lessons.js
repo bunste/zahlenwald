@@ -8,7 +8,8 @@ const LESSON_LOADERS = new Map([
   ['subtraction01', () => import('../lessons/subtraction01.js')],
   ['subtraction02', () => import('../lessons/subtraction02.js')],
   ['multiplication01', () => import('../lessons/multiplication01.js')],
-  ['division01', () => import('../lessons/division01.js')]
+  ['division01', () => import('../lessons/division01.js')],
+  ['training01', () => import('../lessons/training01.js')]
 ]);
 
 export const lessonIds = [...LESSON_LOADERS.keys()];
