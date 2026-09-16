@@ -1,4 +1,4 @@
-import { binaryTask } from '../js/task.js';
+import { binaryTask, ternaryTask, number, operator, equals, input } from '../js/task.js';
 import { shuffle } from '../js/util.js';
 
 // Hier immer die aktuell zu übenden Aufgaben eintragen.
@@ -40,7 +40,44 @@ const TASKS = shuffle([
   binaryTask(510, '-', 90, 420),
   // 5
   binaryTask(280, '+', 50, 330),
-  binaryTask(430, '-', 70, 360)
+  binaryTask(430, '-', 70, 360),
+  // FF blau Seite 5
+  // 1
+  binaryTask(430, '+', 70, 500),
+  binaryTask(360, '+', 80, 440),
+  binaryTask(540, '-', 80, 460),
+  binaryTask(250, '-', 70, 180),
+  // 4a
+  binaryTask(510, '+', 80, 590),
+  binaryTask(80, '+', 220, 300),
+  binaryTask(590, '+', 300, 890),
+  // 4b
+  binaryTask(140, '+', 330, 470),
+  {parts: [number(330), operator('+'), input(), equals(), number(490)], answer: 160},
+  {parts: [input(), operator('+'), number(490), equals(), number(960)], answer: 470},
+  // 4c
+  {parts: [input(), operator('+'), number(270), equals(), number(350)], answer: 80},
+  binaryTask(270, '+', 110, 380),
+  binaryTask(350, '+', 380, 730),
+  // 4d
+  {parts: [number(330), operator('+'), input(), equals(), number(610)], answer: 280},
+  {parts: [input(), operator('+'), number(610), equals(), number(990)], answer: 380},
+  {parts: [input(), operator('+'), number(330), equals(), number(380)], answer: 50},
+  // 4e
+  {parts: [input(), operator('+'), number(150), equals(), number(260)], answer: 110},
+  binaryTask(140, '+', 110, 250),
+  binaryTask(250, '+', 260, 510),
+  // 4f
+  {parts: [number(280), operator('+'), input(), equals(), number(450)], answer: 170},
+  binaryTask(170, '+', 190, 360),
+  binaryTask(450, '+', 360, 810),
+  // 5
+  ternaryTask(340, '+', 23, '+', 60, 423),
+  ternaryTask(125, '+', 75, '+', 53, 253),
+  ternaryTask(473, '+', 15, '-', 73, 415),
+  ternaryTask(3, '+', 68, '+', 297, 368),
+  ternaryTask(625, '-', 43, '-', 25, 557),
+  ternaryTask(35, '+', 426, '+', 65, 526)
 ]);
 
 let index = 0;

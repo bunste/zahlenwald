@@ -43,3 +43,10 @@ export function binaryTask(a, op, b, answer) {
     answer
   };
 }
+
+export function ternaryTask(a, op1, b, op2, c, answer) {
+  return {
+    parts: [number(a), operator(op1), number(b), operator(op2), number(c), equals(), input()],
+    answer
+  };
+}
